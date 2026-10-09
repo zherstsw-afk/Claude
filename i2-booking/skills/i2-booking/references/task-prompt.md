@@ -14,4 +14,4 @@ i2 booking settings:
 - handoff_first_column: {handoff_first_column}
 - week1_monday: {week1_monday}
 
-Follow the i2-booking skill in full: find the current and next week tabs, read the handoff block's `ready` rows, check each against this coach's Calendly first, book only a listed slot, record the result, and clear Email and Phone only after a confirmed booking. Never write outside the handoff block. Report briefly with no names, emails or phone numbers.
+Follow the i2-booking skill in full: find the current and next week tabs, read the handoff block's `ready` rows whose i2 host is {i2_host_first_name} and no one else, check each against this coach's Calendly first, book only a listed slot, record the result, and clear Email and Phone only after a confirmed booking. Never write outside the handoff block. Report briefly with no names, emails or phone numbers.

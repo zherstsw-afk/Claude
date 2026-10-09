@@ -17,7 +17,7 @@ Claude asks for each one, and you paste them in the chat. Nothing else is needed
 |---|---|---|
 | `i2_event_type_uri` | Your i2 event type | Claude finds it from your Calendly event types; confirm the name. |
 | `timezone` | Your timezone | From Calendly; confirm. |
-| `i2_host_first_name` | Your first name, as on the sheet's i2 host | Ask. |
+| `i2_host_first_name` | Your first name, exactly as the i1 coaches write it in the sheet's i2 host column. The plugin only books rows with this name, so other i2 coaches' rows on the same sheet are left alone. | Ask. |
 | `sheet_id` | The shared tracking sheet | The i1 coach gives you the link; take the ID from it. |
 | `handoff_first_column` | Where the handoff block starts on each week tab | The i1 coach's setup finds it and tells you the letter. |
 | `week1_monday` | The Monday that Week 1 tab starts on | The i1 coach's setup finds it and tells you the date. |
