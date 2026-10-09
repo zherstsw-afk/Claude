@@ -1,0 +1,14 @@
+{
+  "name": "i2-booking",
+  "version": "0.1.0",
+  "description": "Books the i1 coaches' qualified candidates into the i2 on the i2 coach's own Calendly, from the shared tracking sheet. Runs in the cloud; no computer needs to stay awake.",
+  "author": {
+    "name": "Zander Herst"
+  },
+  "keywords": [
+    "recruiting",
+    "i2",
+    "calendly",
+    "google sheets"
+  ]
+}
