@@ -1,0 +1,19 @@
+Set up i2 booking for me using the i2-booking plugin. Use these settings, and only ask me about anything marked ASK ME:
+
+- Timezone: [TIMEZONE, e.g. America/New_York]
+- My first name, as the i1 coaches write it in the sheet's i2 host column: [I2 FIRST NAME]
+- Tracking sheet ID: [SHEET ID]
+- Handoff column: [HANDOFF COLUMN, e.g. AF]
+- Week 1 Monday: [WEEK 1 MONDAY, e.g. 2026-09-21]
+- My i2 event type: find it in my Calendly and list the options. ASK ME which one is my i2 if there's more than one.
+
+Before anything else, check that Calendly and Google Sheets are connected. If either isn't, tell me which one and stop.
+
+Then do the setup, but don't create the scheduled check yet. Tell me when it's ready for a test row.
+
+Once I've said the test row is in, run the i2 booking, and report what happened to the row.
+
+After the test works, create the scheduled check named "i2: book handoff rows" with these i1 days and times:
+- i1 days: [I1 DAYS, e.g. Monday, Tuesday and Wednesday]
+- Earliest i1 start: [EARLIEST START, e.g. 10:00 AM]
+- Latest i1 start: [LATEST START, e.g. 3:00 PM]

@@ -1,0 +1,10 @@
+Hi [I2 COACH FIRST NAME],
+
+I'm setting up automatic i2 bookings for my students, so they get their i2 spot as soon as they qualify, without anyone clicking through Calendly. It runs on your own Calendly, and you stay in control of your i2 event type.
+
+Attached is a setup guide and the plugin file. The guide takes about 15 minutes, and it has a prompt to paste into Claude with your details filled in.
+
+Once you're done, let me know and I'll send a test row so we can check it together.
+
+Thanks,
+[YOUR NAME]
