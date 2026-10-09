@@ -5,7 +5,7 @@ Used when the settings block says `i2_booking_mode: handoff`. The i2 coach's own
 ## Where the block is
 
 - Each week tab has a handoff block starting at the column `handoff_first_column` in the settings block (set during setup: the first column after the last column the sheet uses, found by setup and never guessed).
-- Row 1 of the block is the header. Rows 2 onward hold one row per 1 or 2 for that week's sessions.
+- Row 2 of the block is the header. Row 1 is protected on the sheet and is never written. Rows 3 onward hold one row per 1 or 2 for that week's sessions.
 - Never write anywhere else on the tab for this step. The rest of the sheet is written by the routine as before.
 
 ## The columns (in order, starting at `handoff_first_column`)

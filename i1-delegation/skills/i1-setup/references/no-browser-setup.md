@@ -37,7 +37,7 @@ What it replaces: Claude clicking in Recruitee in a Chrome tab. What the coach g
 Use this when the i2 coach can't or won't share their Calendly. The i1 side writes each 1 and 2 to a handoff block on the tracking sheet; the i2 coach's Claude books them on their own Calendly (their plugin: `i2-booking`).
 
 1. **Find the handoff column.** On the current week tab, find the first column to the right of everything the sheet uses (the i1 blocks run to column F, the i2 blocks to column T, and any other content counts too). Tell the coach the letter, and write it as `handoff_first_column`. Never guess it.
-2. **Write the header once per week tab.** Row 1 of that block gets these ten headers, in order: Name, Email, Phone, i2 host, i2 date, i2 start, Call time, Status, Booked at, Note. Write nothing else on the tab. Check the header reads back correctly.
+2. **Write the header once per week tab.** Row 2 of that block gets these ten headers (row 1 is protected on the sheet; if a write to row 1 is refused, that's expected), in order: Name, Email, Phone, i2 host, i2 date, i2 start, Call time, Status, Booked at, Note. Write nothing else on the tab. Check the header reads back correctly.
 3. **Share the sheet.** The coach gives the i2 coach Editor access to the tracking sheet, and sends them the `i2-booking` plugin with the setup message in `setup-i2-coach.md`.
 4. **Test on one row.** Add a test row with Status `ready` (name "i1 Test", email with `+i2test`, phone +15555550100). Wait for the i2 coach's test run (their setup, step 3), then check the row reads `booked` with Email and Phone cleared. Ask the coach to delete the test row, which Claude does not do.
 5. **Switch it on.** Set `i2_booking_mode: handoff` and `handoff_first_column: <letter>`.

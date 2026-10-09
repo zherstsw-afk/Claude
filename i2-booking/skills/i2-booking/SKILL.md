@@ -24,7 +24,7 @@ One principle sits behind every rule: **when unsure, don't book; set the row to 
 ## Steps
 
 1. **Find the week tabs.** The sheet's tabs are named "Week N", where Week 1 starts on `week1_monday` and each week adds one. Read the current week's tab and the next week's.
-2. **Read the handoff block.** On each tab, the block starts at column `handoff_first_column` on row 1 (the header). The columns, in order: Name, Email, Phone, i2 host, i2 date, i2 start, Call time, Status, Booked at, Note. Read rows with Status `ready`. Anything else is not yours to touch, except the rule below.
+2. **Read the handoff block.** On each tab, the block starts at column `handoff_first_column` on row 2 (the header). Data rows start at row 3. The columns, in order: Name, Email, Phone, i2 host, i2 date, i2 start, Call time, Status, Booked at, Note. Read rows with Status `ready`. Anything else is not yours to touch, except the rule below.
 3. **For each `ready` row:**
    a. **Already booked?** Look at this coach's Calendly i2 event for that date and start: if an invitee with the row's email is already there and active, set Status `booked`, Booked at to now, and clear Email and Phone. Do not book again.
    b. **Slot available?** List this coach's i2 event type's available times for that day. The row's i2 start, in the coach's `timezone`, must be in the list. If not, set Status `needs you` and Note `slot not open`. Do not pick another slot.
