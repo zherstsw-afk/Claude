@@ -60,13 +60,15 @@ Reply with a short table:
 - each `i1:` scheduled task: on or off, last run, next run;
 - whether an `i1: daily planner` reminder is pending;
 - today's and tomorrow's Texts entries: title, send time, number of lines, and any that are HELD;
-- whether the browser can be reached and Claude's tab group holds the i1 tab.
+- how bookings and Recruitee run (`i2_booking_mode`, `recruitee_mode`);
+- if `recruitee_mode` is `api`: run the Recruitee script's `check` (the after-session skill's `references/recruitee.md`) and say whether it passed;
+- only if either mode is `browser`: whether the browser can be reached and Claude's tab group holds the i1 tab.
 
 No names or phone numbers in the reply.
 
 ## Open the i1 tab
 
-"Open my i1 tab" or "set up my i1 window." Follow "The i1 tab" in the after-session skill's `references/browser.md`: reuse the tab in Claude's tab group or open one, navigate it to `i2_booking_url`, and tell the coach to drag it into its own window and leave it visible, not minimized. Never open a second tab.
+"Open my i1 tab" or "set up my i1 window." If both `i2_booking_mode` and `recruitee_mode` are `api`, say no tab is needed and stop. Otherwise follow "The i1 tab" in the after-session skill's `references/browser.md`: reuse the tab in Claude's tab group or open one, navigate it to `i2_booking_url`, and tell the coach to drag it into its own window and leave it visible, not minimized. Never open a second tab.
 
 ## Restart the planner
 
@@ -80,6 +82,10 @@ Create a one-off reminder into this chat named `i1: daily planner` for the next 
 2. Update the `i1 settings` block, then update every `i1:` scheduled task's instructions in place so they carry the new value, including the pending planner reminder. Update, never delete and recreate.
 3. If text wording changed, rewrite the lines in entries already queued for today and tomorrow.
 4. Reply with what was updated.
+
+## Switch off the API path
+
+"Use the browser for Recruitee" or "use the browser for bookings": set `recruitee_mode` or `i2_booking_mode` to `browser` as in "Change a setting", and tell the coach the i1 tab and visible window are needed again. To stop Recruitee access completely, the coach deletes the "i1 Claude" token in Recruitee (Settings, Apps and plugins, Personal API tokens) and deletes `i1-recruitee.txt`.
 
 ## Limits
 

@@ -1,5 +1,7 @@
 # Browser steps: Calendly and Recruitee
 
+Only for the steps still in browser mode: i2 bookings when `i2_booking_mode` is not `api`, Recruitee when `recruitee_mode` is not `api`. When both are `api`, nothing here is used and no i1 tab is needed.
+
 These run in the coach's own Chrome through the Claude extension. The coach is already signed in to both sites. Never sign in for them.
 
 Use element references from a page search, not screen coordinates: the window size changes.

@@ -83,6 +83,15 @@ A coach who says "morning", "afternoon" or "evening" without an hour: ask which 
 | Cancelled booking | `cancelled_booking` | `no_show` | `no_show`, `leave` |
 | Recruitee note for each 2 | `recruitee_notes_for_2s` | `yes` | `yes`, `no` |
 
+### Without a browser (not on the form; setup fills these in)
+
+| Row | Key | Default | Allowed |
+|---|---|---|---|
+| How Recruitee steps run | `recruitee_mode` | `browser` | `api` once setup's Recruitee key test passes, else `browser` |
+| Where the Recruitee key file is | `recruitee_key_file` | none | the path of `i1-recruitee.txt` in the folder connected to the i1 chat |
+| How i2 bookings run | `i2_booking_mode` | `browser` | `api` once setup's Calendly test passes, else `browser` |
+| The i2 event type | `i2_event_type_uri` | none | the event type's API reference, found in setup |
+
 The four permission rows are never taken from the sheet alone. "Without asking" on the sheet becomes `granted` only after the coach confirms it in the chat, in step 4 of setup.
 
 ## What each choice changes
@@ -92,4 +101,5 @@ The four permission rows are never taken from the sheet alone. "Without asking" 
 - `weekly_sheet_setup: no`: do not create the weekly sheet setup task.
 - `i2_times_by: i2_coach`: do not create the weekly i2 times check-in.
 - `i1_days`, `i1_start_hours`, `call_hours`: decide which evenings and mornings the text-writing tasks run, which phone automations the coach needs, and when the end-of-day check runs.
+- `recruitee_mode` and `i2_booking_mode`: when both are `api`, the daily planner opens no browser tab and the coach has no window to keep visible.
 - Everything else is read by the after-session routine each time it runs.

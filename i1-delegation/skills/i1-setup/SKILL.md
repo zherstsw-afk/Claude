@@ -30,11 +30,17 @@ Do every step in the one chat the coach will keep for i1 delegation (their "i1 c
 
 ## Step 1. Check what is connected
 
-Check, without asking, whether this chat can reach: Google Sheets, Google Calendar, Calendly, Zoom, and the coach's Chrome browser. Google Drive is not needed; do not ask the coach to connect it (it is also temporarily unavailable on Student Works accounts). Show one line per item: "Connected" or "Missing". Then fix the missing items one at a time: give the taps to connect it, wait for "done", check again. Chrome needs the Claude extension installed in the browser where the coach is signed in to Recruitee. The i2 booking page is public, so no Calendly sign-in is needed in Chrome.
+Check, without asking, whether this chat can reach: Google Sheets, Google Calendar, Calendly and Zoom. Chrome is checked later, only if step 1b leaves a step in browser mode. Google Drive is not needed; do not ask the coach to connect it (it is also temporarily unavailable on Student Works accounts). Show one line per item: "Connected" or "Missing". Then fix the missing items one at a time: give the taps to connect it, wait for "done", check again. If a step stays in browser mode after step 1b: Chrome needs the Claude extension installed in the browser where the coach is signed in to Recruitee. The i2 booking page is public, so no Calendly sign-in is needed in Chrome.
 
 Zoom needs one account setting the coach switches on themselves (Claude cannot change it): on zoom.us/profile/setting, the **AI Companion** tab, set **Meeting summary** to start automatically. That is what produces the transcript Claude reads. Cloud recording is optional; if the coach has it, turning on **Automatic recording, In the cloud** under the Recording tab is a backup, but it is not needed. Zoom recording to the computer or iCloud does not help, because Claude cannot read local files.
 
-**Test:** read the coach's Calendly user, list today's calendar events, and open the i1 tab (the after-session skill's `references/browser.md`, "The i1 tab"), have the coach drag it into its own window, then check the Calendly page shows days and times. For Zoom, have the coach start a meeting alone, talk for about two minutes, and end it; after about 10 minutes, find that meeting and read a line of its transcript back to them (by meeting UUID, types "transcript"; do not look only in cloud recordings). Report pass or fail for each.
+**Test:** read the coach's Calendly user and list today's calendar events. For Zoom, have the coach start a meeting alone, talk for about two minutes, and end it; after about 10 minutes, find that meeting and read a line of its transcript back to them (by meeting UUID, types "transcript"; do not look only in cloud recordings). Report pass or fail for each.
+
+## Step 1b. No browser: Recruitee and the i2 bookings
+
+Goal: `recruitee_mode: api` and `i2_booking_mode: api`, so nothing needs a Chrome window. Follow `references/no-browser-setup.md`. The coach's part takes under 10 minutes. The i2 bookings also need one thing from the i2 coach, which can happen later. Until it does, bookings stay in browser mode.
+
+Whatever is still in browser mode at the end of this step needs the Chrome check from step 1 and the i1 tab test: open the i1 tab (the after-session skill's `references/browser.md`, "The i1 tab"), have the coach drag it into its own window, then check the Calendly page shows days and times.
 
 ## Step 2. Collect the settings
 
@@ -63,6 +69,7 @@ The table below is the core every setup needs. `references/builder-sheet.md` hol
 | `text_1_hour`, `text_10_min`, `text_qualification`, `text_call_reminder`, `text_i2_reminder` | Show the defaults from the after-session skill's `references/texts.md`. The coach may reword them. Keep the `<...>` tokens; they are filled in for each person. |
 | Session hours | Ask which days their i1s run, the earliest time any i1 starts and the latest time any i1 starts across the week (whole hours only; example: earliest 10:00 AM on Wednesday, latest 3:00 PM on Tuesday), the earliest and latest hours they make qualification calls, and the latest hour an i2 can start. Used in steps 3 and 6. |
 | `permission_texts`, `permission_bookings`, `permission_no_show_moves` | Set in step 4. |
+| `recruitee_mode`, `recruitee_key_file`, `i2_booking_mode`, `i2_event_type_uri` | Set in step 1b. Never shown on the form. |
 
 **Test:** read the sheet layout without writing (week tab found, i1 header rows where expected, i2 blocks found). If the layout differs from the after-session skill's `references/sheet.md`, stop and tell the coach: this version only works with the standard tracking template.
 
@@ -121,7 +128,7 @@ Pick the coach's most recent cloud-recorded i1. A brand-new coach usually has no
 Tell the coach in four short bullets, then say "You're set up.":
 
 - What they still do: host the session; say each name, their 1, 2 or 3, their i2 slot and their call time aloud; make the calls; tick Qual.? on the sheet after each call.
-- What must stay on: the computer awake from about 40 to 80 minutes after each i1 starts, with the i1 tab in its own visible window (and Sunday evening if Claude fills the i2 times). Each i1 morning Claude opens that one tab and says so; the coach drags it into its own window, leaves it visible and not minimized, and does not close it or add tabs to it; the phone not shut down or out of battery, with signal (locked with the screen off is fine).
+- What must stay on. If both `recruitee_mode` and `i2_booking_mode` are `api`: the computer awake with the Claude app open (nothing needs to be on screen) from about 40 to 80 minutes after each i1 starts, so Claude can read the Recruitee key file. If either is still `browser`: the same hours, plus the i1 tab in its own visible window (and Sunday evening if Claude fills the i2 times from the browser); each i1 morning Claude opens that one tab and says so; the coach drags it into its own window, leaves it visible and not minimized, and does not close it or add tabs to it. In both cases: the phone not shut down or out of battery, with signal (locked with the screen off is fine).
 - How to stop it: "pause i1" or "don't text" plus a name in this chat, or delete a line from a Texts calendar entry before it sends.
 - How they will know if something failed: the end-of-day check sends a phone alert.
 
@@ -138,6 +145,7 @@ If reportlab is missing, install it first (`pip install reportlab`). Send the PD
 ## Limits
 
 - Never ask for or type a password. Never sign in for the coach.
+- Never ask the coach to paste a token into the chat, and never open, print or quote the Recruitee key file.
 - Never create an account.
 - Never write candidate names, emails or phone numbers to a file.
-- Setup changes nothing in the tracking sheet, Calendly or Recruitee. Only the Texts calendar test entries and the scheduled tasks are created.
+- Setup changes nothing in the tracking sheet, Calendly or Recruitee, except on the coach's own test candidate and one test booking that is cancelled straight away (step 1b). Otherwise only the Texts calendar test entries, the empty key file and the scheduled tasks are created.
