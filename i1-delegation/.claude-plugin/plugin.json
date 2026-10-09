@@ -1,0 +1,15 @@
+{
+  "name": "i1-delegation",
+  "version": "0.5.7",
+  "description": "Runs the work around a coach's i1 information sessions: reminder texts, the tracking sheet, i2 bookings, no-show moves and notes.",
+  "author": {
+    "name": "Zander Herst"
+  },
+  "keywords": [
+    "recruiting",
+    "i1",
+    "information session",
+    "calendly",
+    "recruitee"
+  ]
+}
