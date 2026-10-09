@@ -29,14 +29,12 @@ This takes about 5 minutes, and it runs by itself after that. Your computer does
 1. Open a new chat in Claude.
 2. Paste the prompt your i1 coach sent you (it's filled in with your details) and send it.
 
-Claude checks your connections, asks about your i2 event type if you have more than one, and walks you through the rest.
+Claude checks your connections, asks about your i2 event type if you have more than one, sets up the plugin, and runs a test on the test row your i1 coach has already added to the sheet.
 
-## Step 4. Test
+## Step 4. Check the test
 
-1. Tell the i1 coach you're ready. They add one test row to the sheet.
-2. In your Claude chat, type **"run the i2 booking"**.
-3. Check the row: it should say **booked**, with a booked time, and the email and phone cleared.
-4. Cancel the test booking in Calendly (open the confirmation email and click Cancel).
+1. Check the row: it should say **booked**, with a booked time, and the email and phone cleared.
+2. Cancel the test booking in Calendly (open the confirmation email and click Cancel).
 
 Once the test works, the hourly check turns on by itself, and it only runs on the i1 days.
 
