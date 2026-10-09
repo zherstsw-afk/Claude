@@ -4,7 +4,7 @@ Paste everything from the next line into the scheduled task, with your settings 
 
 ---
 
-Book the i2 handoff rows for {i2_host_first_name}. Nobody is watching this run: do not ask questions; set rows that need a person to `needs you` and report.
+Book the i2 handoff rows for {i2_host_first_name}. Nobody is watching this run: do not ask questions; set rows that need a person to `needs you` and report. If the first read finds no `ready` rows, stop there and report "no i2 handoffs".
 
 i2 booking settings:
 - i2_event_type_uri: {i2_event_type_uri}

@@ -9,6 +9,12 @@ Runs for the i2 coach. Each run reads the **handoff block** on the shared tracki
 
 One principle sits behind every rule: **when unsure, don't book; set the row to `needs you` and say why.** Never pick another slot.
 
+## Keep each run small
+
+- **One read first.** Read the handoff block on the current and next week tabs in one call. If no row is `ready`, stop now and report one line: "no i2 handoffs". Do nothing else.
+- **Batch.** Check Calendly once per date (not once per person), and write all the result cells for the run in one sheet update, not one per row.
+- **Only on i1 days.** This task is scheduled only in the hours after an i1 starts (`references/setup.md`, step 4), so a run that finds nothing should be cheap.
+
 ## Before starting
 
 1. **Settings.** Find the block headed `i2 booking settings` in the scheduled task or earlier in this chat. If it is missing or a value is blank, stop and tell the coach to say "set up i2 booking".

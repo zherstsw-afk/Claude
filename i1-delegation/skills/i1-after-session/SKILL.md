@@ -32,6 +32,14 @@ A block counts as processed when any name row has Show? TRUE, a Conversion or a 
   - skip a Recruitee move if the person's stage is already the no-show stage;
   - skip a booking if the person's Recruitee stage already shows the i2 stage, or their name is already in the i2 block with a booking confirmed earlier in this chat. If unsure whether they are booked, do not book. Needs you.
 
+## Read the recording once
+
+Read the transcript one time, at step 5. Pull out the working list and then drop the transcript from the run:
+
+- One line per booked person: name (as said), showed or not, position (1, 2 or 3), i2 slot agreed, call time, and any unclear point to put on "Needs you".
+- Nothing else from the transcript is carried into later steps. Every step after this works from the list, not from the transcript.
+- Never re-read the transcript to check a detail. If a detail is missing from the list, it was not said: "Needs you".
+
 ## Read the recording
 
 - Go by the names the coach says aloud. Speaker labels are unreliable.
@@ -47,10 +55,10 @@ Texts come first because they have a send time.
 
 1. **Qualification texts.** For each 1 and 2 with an agreed slot and call time, add one line to the Texts-calendar entry that starts 58 minutes after the session start (it sends on the hour). Wording, entry rules, holds and the do-not-text list: `references/texts.md`.
 2. **Call reminder texts.** Only when the call is on a later day than the i1. Queue it for the day of the call (`references/texts.md`). A same-day call gets no separate reminder: the qualification text already gives the time.
-3. **Sheet rows.** Show?, Conversion, i2 Timeslot, Notes (`references/sheet.md`). Never write the name column.
+3. **Sheet rows.** Show?, Conversion, i2 Timeslot, Notes (`references/sheet.md`). Never write the name column. Write all of this week's rows for the block in one sheet update, not one call per person.
 4. **Colours.** Green for showed, gray for no-show, red for position 3.
 5. **i2 block.** Each 1 and 2 goes in the right-hand group of their slot's block with `Call <Day> H:MM PM` in the Deadline column.
-6. **Coach's calendar.** One 20-minute event per 1 and 2 on the coach's main calendar (never the Texts calendar): `Qualification call - <name>`, no guests, no notifications, no phone number.
+6. **Coach's calendar.** One 20-minute event per 1 and 2 on the coach's main calendar (never the Texts calendar): `Qualification call - <name>`, no guests, no notifications, no phone number. Read the calendar once for the whole day, not once per person.
 7. **i2 bookings.** Book each 1 and 2 into the i2 by the mode in `i2_booking_mode`: `api` uses `references/calendly-api.md`; `browser` uses `references/browser.md`; `handoff` writes one `ready` row per 1 and 2 to the handoff block on the sheet for the i2 coach's Claude to book (`references/handoff.md`). In handoff mode this coach's Calendly is not used for the i2 at all.
 8. **Recruitee.** Move no-shows to the no-show stage; disqualify each 3; add a short note for each 2: `references/recruitee.md` when `recruitee_mode` is `api`, otherwise `references/browser.md`.
 9. **Report** (format below). If anything is on the "Needs you" list and a phone-notification tool is available, also send one notification: `i1 <time>: <n> need you`.
