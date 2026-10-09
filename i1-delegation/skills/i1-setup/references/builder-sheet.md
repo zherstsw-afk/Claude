@@ -89,7 +89,8 @@ A coach who says "morning", "afternoon" or "evening" without an hour: ask which 
 |---|---|---|---|
 | How Recruitee steps run | `recruitee_mode` | `browser` | `api` once setup's Recruitee key test passes, else `browser` |
 | Where the Recruitee key file is | `recruitee_key_file` | none | the path of `i1-recruitee.txt` in the folder connected to the i1 chat |
-| How i2 bookings run | `i2_booking_mode` | `browser` | `api` once setup's Calendly test passes, else `browser` |
+| How i2 bookings run | `i2_booking_mode` | `browser` | `handoff` (the i2 coach's Claude books from the sheet, preferred), `api` once setup's Calendly test passes, else `browser` |
+| Where the handoff block starts | `handoff_first_column` | none | the column letter found in setup, Part B; needed for `handoff` only |
 | The i2 event type | `i2_event_type_uri` | none | the event type's API reference, found in setup |
 
 The four permission rows are never taken from the sheet alone. "Without asking" on the sheet becomes `granted` only after the coach confirms it in the chat, in step 4 of setup.

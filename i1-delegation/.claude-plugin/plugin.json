@@ -1,7 +1,7 @@
 {
   "name": "i1-delegation",
-  "version": "0.6.0",
-  "description": "Runs the work around a coach's i1 information sessions: reminder texts, the tracking sheet, i2 bookings, no-show moves and notes. Recruitee and i2 bookings can run without a browser.",
+  "version": "0.7.0",
+  "description": "Runs the work around a coach's i1 information sessions: reminder texts, the tracking sheet, i2 bookings (through the shared sheet to the i2 coach), no-show moves and notes. Recruitee and i2 bookings can run without a browser.",
   "author": {
     "name": "Zander Herst"
   },

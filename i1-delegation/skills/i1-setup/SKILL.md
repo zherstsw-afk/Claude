@@ -148,4 +148,4 @@ If reportlab is missing, install it first (`pip install reportlab`). Send the PD
 - Never ask the coach to paste a token into the chat, and never open, print or quote the Recruitee key file.
 - Never create an account.
 - Never write candidate names, emails or phone numbers to a file.
-- Setup changes nothing in the tracking sheet, Calendly or Recruitee, except on the coach's own test candidate and one test booking that is cancelled straight away (step 1b). Otherwise only the Texts calendar test entries, the empty key file and the scheduled tasks are created.
+- Setup changes nothing in the tracking sheet, Calendly or Recruitee, except: the handoff header row on each week tab, if the coach uses handoff mode (`references/no-browser-setup.md`, Part B); the coach's own test candidate and one test booking that is cancelled straight away (step 1b); and test rows the coach asks to delete. Otherwise only the Texts calendar test entries, the empty key file and the scheduled tasks are created.
