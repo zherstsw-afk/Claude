@@ -62,13 +62,14 @@ Reply with a short table:
 - today's and tomorrow's Texts entries: title, send time, number of lines, and any that are HELD;
 - how bookings and Recruitee run (`i2_booking_mode`, `recruitee_mode`);
 - if `recruitee_mode` is `api`: run the Recruitee script's `check` (the after-session skill's `references/recruitee.md`) and say whether it passed;
+- if `recruitee_mode` is `builtin`: say whether Tellent is signed in in the built-in browser (`references/recruitee-builtin-browser.md`);
 - only if either mode is `browser`: whether the browser can be reached and Claude's tab group holds the i1 tab.
 
 No names or phone numbers in the reply.
 
 ## Open the i1 tab
 
-"Open my i1 tab" or "set up my i1 window." If both `i2_booking_mode` and `recruitee_mode` are `api`, say no tab is needed and stop. Otherwise follow "The i1 tab" in the after-session skill's `references/browser.md`: reuse the tab in Claude's tab group or open one, navigate it to `i2_booking_url`, and tell the coach to drag it into its own window and leave it visible, not minimized. Never open a second tab.
+"Open my i1 tab" or "set up my i1 window." If `recruitee_mode` is `api` or `builtin`, and `i2_booking_mode` is `api` or `handoff`, say no Chrome tab is needed and stop. Otherwise follow "The i1 tab" in the after-session skill's `references/browser.md`: reuse the tab in Claude's tab group or open one, navigate it to `i2_booking_url`, and tell the coach to drag it into its own window and leave it visible, not minimized. Never open a second tab.
 
 ## Restart the planner
 

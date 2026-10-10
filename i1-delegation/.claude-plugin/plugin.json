@@ -1,7 +1,7 @@
 {
   "name": "i1-delegation",
-  "version": "0.7.0",
-  "description": "Runs the work around a coach's i1 information sessions: reminder texts, the tracking sheet, i2 bookings (through the shared sheet to the i2 coach), no-show moves and notes. Recruitee and i2 bookings can run without a browser.",
+  "version": "0.8.0",
+  "description": "Runs the work around a coach's i1 information sessions: reminder texts, the tracking sheet, i2 bookings (through the shared sheet to the i2 coach), no-show moves and notes. Recruitee can run in Tellent's built-in browser, or through its API; the i2 bookings can run through the shared sheet.",
   "author": {
     "name": "Zander Herst"
   },

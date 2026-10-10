@@ -38,9 +38,9 @@ Zoom needs one account setting the coach switches on themselves (Claude cannot c
 
 ## Step 1b. No browser: Recruitee and the i2 bookings
 
-Goal: `recruitee_mode: api` and `i2_booking_mode: api`, so nothing needs a Chrome window. Follow `references/no-browser-setup.md`. The coach's part takes under 10 minutes. The i2 bookings also need one thing from the i2 coach, which can happen later. Until it does, bookings stay in browser mode.
+Goal: no Chrome window needed. Recruitee runs either in the built-in browser (`recruitee_mode: builtin`, setup Part A2) or through its API (`recruitee_mode: api`, Part A); the i2 bookings run through the shared sheet (`i2_booking_mode: handoff`, Part B). Follow `references/no-browser-setup.md`. The coach's part takes under 10 minutes. The i2 bookings also need one thing from the i2 coach, which can happen later. Until it does, bookings stay in browser mode.
 
-Whatever is still in browser mode at the end of this step needs the Chrome check from step 1 and the i1 tab test: open the i1 tab (the after-session skill's `references/browser.md`, "The i1 tab"), have the coach drag it into its own window, then check the Calendly page shows days and times.
+Only Recruitee in Chrome (`recruitee_mode: browser`) or i2 bookings in Chrome (`i2_booking_mode: browser`) needs the Chrome check from step 1 and the i1 tab test: open the i1 tab (the after-session skill's `references/browser.md`, "The i1 tab"), have the coach drag it into its own window, then check the Calendly page shows days and times.
 
 ## Step 2. Collect the settings
 
@@ -69,7 +69,7 @@ The table below is the core every setup needs. `references/builder-sheet.md` hol
 | `text_1_hour`, `text_10_min`, `text_qualification`, `text_call_reminder`, `text_i2_reminder` | Show the defaults from the after-session skill's `references/texts.md`. The coach may reword them. Keep the `<...>` tokens; they are filled in for each person. |
 | Session hours | Ask which days their i1s run, the earliest time any i1 starts and the latest time any i1 starts across the week (whole hours only; example: earliest 10:00 AM on Wednesday, latest 3:00 PM on Tuesday), the earliest and latest hours they make qualification calls, and the latest hour an i2 can start. Used in steps 3 and 6. |
 | `permission_texts`, `permission_bookings`, `permission_no_show_moves` | Set in step 4. |
-| `recruitee_mode`, `recruitee_key_file`, `i2_booking_mode`, `i2_event_type_uri` | Set in step 1b. Never shown on the form. |
+| `recruitee_mode`, `recruitee_site`, `recruitee_key_file`, `i2_booking_mode`, `i2_event_type_uri`, `handoff_first_column` | Set in step 1b. Never shown on the form. |
 
 **Test:** read the sheet layout without writing (week tab found, i1 header rows where expected, i2 blocks found). If the layout differs from the after-session skill's `references/sheet.md`, stop and tell the coach: this version only works with the standard tracking template.
 
