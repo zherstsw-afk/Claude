@@ -87,7 +87,8 @@ A coach who says "morning", "afternoon" or "evening" without an hour: ask which 
 
 | Row | Key | Default | Allowed |
 |---|---|---|---|
-| How Recruitee steps run | `recruitee_mode` | `browser` | `api` once setup's Recruitee key test passes, else `browser` |
+| How Recruitee steps run | `recruitee_mode` | `browser` | `builtin` once setup's Part A2 passes (Tellent, built-in browser, pane closed); `api` once setup's Recruitee key test passes; else `browser` |
+| Recruitee site (builtin mode) | `recruitee_site` | `https://app.tellent.com/ats/` | the candidates page; set during Part A2 |
 | Where the Recruitee key file is | `recruitee_key_file` | none | the path of `i1-recruitee.txt` in the folder connected to the i1 chat |
 | How i2 bookings run | `i2_booking_mode` | `browser` | `handoff` (the i2 coach's Claude books from the sheet, preferred), `api` once setup's Calendly test passes, else `browser` |
 | Where the handoff block starts | `handoff_first_column` | none | the column letter found in setup, Part B; needed for `handoff` only |

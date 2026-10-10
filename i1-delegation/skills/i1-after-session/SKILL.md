@@ -60,7 +60,7 @@ Texts come first because they have a send time.
 5. **i2 block.** Each 1 and 2 goes in the right-hand group of their slot's block with `Call <Day> H:MM PM` in the Deadline column.
 6. **Coach's calendar.** One 20-minute event per 1 and 2 on the coach's main calendar (never the Texts calendar): `Qualification call - <name>`, no guests, no notifications, no phone number. Read the calendar once for the whole day, not once per person.
 7. **i2 bookings.** Book each 1 and 2 into the i2 by the mode in `i2_booking_mode`: `api` uses `references/calendly-api.md`; `browser` uses `references/browser.md`; `handoff` writes one `ready` row per 1 and 2 to the handoff block on the sheet for the i2 coach's Claude to book (`references/handoff.md`). In handoff mode this coach's Calendly is not used for the i2 at all.
-8. **Recruitee.** Move no-shows to the no-show stage; disqualify each 3; add a short note for each 2: `references/recruitee.md` when `recruitee_mode` is `api`, otherwise `references/browser.md`.
+8. **Recruitee.** Move no-shows to the no-show stage; disqualify each 3; add a short note for each 2: `references/recruitee.md` when `recruitee_mode` is `api`; `references/recruitee-builtin-browser.md` when it is `builtin`; otherwise `references/browser.md`.
 9. **Report** (format below). If anything is on the "Needs you" list and a phone-notification tool is available, also send one notification: `i1 <time>: <n> need you`.
 
 Messy cases (duplicates, cancellations, missing details, two profiles): follow `references/rules.md` exactly.
@@ -86,7 +86,8 @@ These lines in the settings block change a step. A missing line means the defaul
 | `disqualify_send_email` | `no` | Step 8, browser mode only. `yes` leaves the email option on when disqualifying a 3. |
 | `i2_booking_mode` | `browser` | Step 7. `api` books through the Calendly connector, with no browser (`references/calendly-api.md`). Needs `i2_event_type_uri`. `handoff` writes rows to the sheet's handoff block for the i2 coach's Claude to book (`references/handoff.md`). Needs `handoff_first_column`. |
 | `handoff_first_column` | none | Step 7, handoff mode only. The column letter where the handoff block starts on each week tab, found by setup. |
-| `recruitee_mode` | `browser` | Step 8. `api` uses Recruitee's API through the bundled script, with no browser (`references/recruitee.md`). Needs `recruitee_key_file`. |
+| `recruitee_mode` | `browser` | Step 8. `api` uses Recruitee's API through the bundled script, with no browser (`references/recruitee.md`). Needs `recruitee_key_file`. `builtin` works in Tellent through the Claude app's built-in browser with its pane closed (`references/recruitee-builtin-browser.md`). Needs `recruitee_site`. |
+| `recruitee_site` | `https://app.tellent.com/ats/` | Step 8, builtin mode only. The candidates page the built-in browser opens. |
 
 Only the default setup has been run on live sessions. When a non-default option is in force, say so in the report's last line the first time it is used.
 

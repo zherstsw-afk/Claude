@@ -32,6 +32,18 @@ What it replaces: Claude clicking in Recruitee in a Chrome tab. What the coach g
    - Ask the coach to delete the i1 Test candidate themselves. Claude never deletes a record.
 7. **Switch it on.** Set `recruitee_mode: api` and `recruitee_key_file: <path>` in the settings block.
 
+## Part A2. Recruitee in Tellent through the built-in browser (when no API token is available)
+
+Use this when Tellent doesn't offer personal API tokens for your account. The coach signs in to Tellent once in the built-in browser; after that Claude does the Recruitee steps there, with the browser pane closed.
+
+1. **Set the browser.** Settings → Cowork → Preferred browser → built-in browser. Start a new Cowork chat after changing it.
+2. **Sign in once.** Open the built-in browser pane from the Claude app, go to `https://app.tellent.com/ats/` and sign in yourself. Close the pane. Never give Claude your password.
+3. **Run the reading test.** Use the prompt in the setup message: it reads the first five candidate names and stages and changes nothing. Pass: it reads the list with the pane closed. Fail: it says the page didn't load; stop here and keep `recruitee_mode: browser`.
+4. **Test candidate.** Ask the coach to add an "i1 Test" candidate with a `+i1test` email, at the i1 Scheduled stage. Then run, in order: find by email (reading only); move to `i1 No Show` and check the "we missed you" email reaches the `+i1test` inbox; add a note; disqualify only if `permission_disqualify` is not `never`. Ask the coach to delete the test candidate in Tellent themselves.
+5. **Switch it on.** Set `recruitee_mode: builtin` and `recruitee_site: https://app.tellent.com/ats/`.
+
+If step 3 or step 4 fails, keep `recruitee_mode: browser` and say so. Don't switch a coach to a mode that stops the no-show email.
+
 ## Part B. i2 bookings: handoff to the i2 coach (preferred)
 
 Use this when the i2 coach can't or won't share their Calendly. The i1 side writes each 1 and 2 to a handoff block on the tracking sheet; the i2 coach's Claude books them on their own Calendly (their plugin: `i2-booking`).
